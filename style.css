@@ -38,6 +38,9 @@ img {
 }
 
 .wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     text-align: center;
     background-color: white;

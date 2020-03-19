@@ -17,12 +17,12 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="header">
         <div class="box" name="about" onclick="presentPage('about','about')">About</div>
-        <div class="box" name="skills" onclick="presentPage('about', 'about-skills')">Skills</div>
+        <div class="box" name="skills" onclick="presentPage('about','about-skills')">Skills</div>
         <div class="box" name="timeline" onclick="presentPage('about','about-timeline')">Timeline</div>
-        <div class="box" name="projects" onclick="presentPage('about', 'about-projects')">Projects</div>
-        <div class="box" name="contact" onclick="presentPage('about', 'about-contact')">Contact</div>
+        <div class="box" name="projects" onclick="presentPage('about','about-projects')">Projects</div>
+        <div class="box" name="contact" onclick="presentPage('about','about-contact')">Contact</div>
         <div class="box" name="blog" onclick="presentPage('blog')">Blog</div>
     </div>
     <h1>John Buonassisi</h1>
@@ -117,6 +117,11 @@
         // given a pageId, underline the page title and present the page
         // other pages will not be displayed and title not underlined
         function presentPage(pageId, scrollId) {
+            header = document.getElementById("header");
+            headerHeight = header.getBoundingClientRect().height;
+            x = document.getElementById(scrollId);
+            yScroll = document.defaultView.scrollY;
+            document.defaultView.scrollTo(0, x.getBoundingClientRect().top + yScroll - headerHeight);
             x = document.getElementsByClassName('page');
             var i;
             for (i = 0; i < x.length; i++) {
@@ -126,8 +131,6 @@
                     x[i].style.display = 'none';
                 }
             }
-            x = document.getElementById(scrollId)
-            document.defaultView.scrollTo(0, x.getBoundingClientRect().top)
         }
     </script>
 
