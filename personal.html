@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>John Buonassisi</title>
+
+    <meta name="author" content="John Buonassisi">
+    <meta name="description" content="This is my personal web page">
+
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:description" content="This is an example page to demonstrate usage of metadata on web pages.">
+    <meta property="og:title" content="Metadata; The HTML &lt;head&gt;, on MDN">
+
+    <link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box" name="about" onclick="presentPage('about','about')">About</div>
+        <div class="box" name="skills" onclick="presentPage('about', 'about-skills')">Skills</div>
+        <div class="box" name="timeline" onclick="presentPage('about','about-timeline')">Timeline</div>
+        <div class="box" name="projects" onclick="presentPage('about', 'about-projects')">Projects</div>
+        <div class="box" name="contact" onclick="presentPage('about', 'about-contact')">Contact</div>
+        <div class="box" name="blog" onclick="presentPage('blog')">Blog</div>
+    </div>
+    <h1>John Buonassisi</h1>
+    <img src="Headshot.png" alt="Headshot of John Buonassisi" title="John Buonassisi">
+    <div class="page" id="about">
+        <h2>About</h2>
+        <p>I am a Senior Software Engineer, that works on bringing Satellite Ground Systems into the 21st century. In my spare time I enjoy anything outdoors related including skiing, biking, soccer, and kayaking. I also love to cook and go on food adventures
+            with my wife.
+        </p>
+        <div class="about-skills" id="about-skills">
+            <div class="about-skills-list" name="experience">
+                <h2>Experience</h2>
+                <ul>
+                    <li>Satellite Data Reconstruction</li>
+                    <li>Ground System Scheduling</li>
+                    <li>Technical Leadership</li>
+                    <li>System Design</li>
+                    <li>System Integration</li>
+                    <li>Application Design</li>
+                    <li>Database Design</li>
+                </ul>
+            </div>
+            <div class="about-skills-list" name="languages">
+                <h2>Languages</h2>
+                <ul>
+                    <li>Go</li>
+                    <li>Java</li>
+                    <li>C++</li>
+                    <li>Swift</li>
+                    <li>Objective-C</li>
+                    <li>Bash</li>
+                    <li>Python</li>
+                </ul>
+            </div>
+            <div class="about-skills-list" name="technologies">
+                <h2>Technologies</h2>
+                <ul>
+                    <li>Kubernetes</li>
+                    <li>Docker</li>
+                    <li>MongoDB</li>
+                    <li>Postgres</li>
+                    <li>SQLite</li>
+                    <li>Kafka</li>
+                    <li>TCP/UDP Networking</li>
+                </ul>
+            </div>
+        </div>
+        <div class="about-timeline" id="about-timeline">
+            <h2>Timeline</h2>
+            <ul>
+                <li>2008-2013 SFU - Completed Bachelor of Applied Science with Honours</li>
+                <li>2010 Ballard Power Systems - Test Engineer of Hydrogen Fuel Cell membranes</li>
+                <li>2012 SFU Image Processing Lab - Research Assistant working on Biomedical Image Processing</li>
+                <li>2013-2016 MDA - Developer on existings Ground Systems and helped deploy them around the world</li>
+                <li>2016-2018 MDA - Developer on next generation Ground Systems using latest technologies</li>
+                <li>2018-2020 MDA - Technical Lead of projects related to next generation Ground Systems</li>
+            </ul>
+        </div>
+        <div class="about-projects" id="about-projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>YourTake - A photo sharing game for iOS, <a href="https://github.com/johnbuonassisi">github.com/johnbuonassisi/yourtake</a></li>
+                <li>Web Scrapper - A simple Go application for scrapping soccer schedules from a website, <a href="https://github.com/johnbuonassisi/8rinks-scrapper">github.com/johnbuonassisi/8rinks-scrapper</a></li>
+                <li>Personal Website - This website, my first foray into a simple frontend app, <a href="https://github.com/johnbuonassisi/mysite">github.com/johnbuonassisi/mysite</a></li>
+                <li>Plastic Extruder - I built a small scale plastic extruder inspired by <a href="https://community.preciousplastic.com/academy/build/extrusion">precious plastic</a></li>
+                <li>Heart Rate Monitor - I designed a PCB for measuring the oxygen levels in blood via pulse oximetry</li>
+            </ul>
+        </div>
+        <div class="about-contact" id="about-contact">
+            <h2>Contact</h2>
+            <ul>
+                <li>johnbuonassisi@gmail.com</li>
+                <li><a href="https://github.com/johnbuonassisi">github.com/johnbuonassisi</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page" id="blog">
+        <p>Coming soon</p>
+    </div>
+
+    <div class="footer">
+        <p>Created by John Buonassisi</p>
+    </div>
+
+    <script>
+        // underline the first page title and present it to the user
+        // this presents the about page and underlines the about title
+        x = document.getElementById('about')
+        x.style.display = 'block';
+
+        // given a pageId, underline the page title and present the page
+        // other pages will not be displayed and title not underlined
+        function presentPage(pageId, scrollId) {
+            x = document.getElementsByClassName('page');
+            var i;
+            for (i = 0; i < x.length; i++) {
+                if (x[i].id == pageId) {
+                    x[i].style.display = 'block';
+                } else {
+                    x[i].style.display = 'none';
+                }
+            }
+            x = document.getElementById(scrollId)
+            document.defaultView.scrollTo(0, x.getBoundingClientRect().top)
+        }
+    </script>
+
+</body>
+
+
+</html>
