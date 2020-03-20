@@ -108,29 +108,6 @@
     </footer>
 
     <script>
-        // underline the first page title and present it to the user
-        // this presents the about page and underlines the about title
-        x = document.getElementById('about')
-        x.style.display = 'block';
-
-        // given a pageId, underline the page title and present the page
-        // other pages will not be displayed and title not underlined
-        function presentPage(pageId, scrollId) {
-            header = document.getElementById("header");
-            headerHeight = header.getBoundingClientRect().height;
-            x = document.getElementById(scrollId);
-            yScroll = document.defaultView.scrollY;
-            document.defaultView.scrollTo(0, x.getBoundingClientRect().top + yScroll - headerHeight);
-            x = document.getElementsByClassName('page');
-            var i;
-            for (i = 0; i < x.length; i++) {
-                if (x[i].id == pageId) {
-                    x[i].style.display = 'block';
-                } else {
-                    x[i].style.display = 'none';
-                }
-            }
-        }
     </script>
 
 </body>
