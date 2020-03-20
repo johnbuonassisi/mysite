@@ -1,13 +1,14 @@
 html {
     background-color: white;
     font-size: 20px;
-    font-family: Georgia, serif;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: white;
 }
 
 ul {
     background: white;
-    padding: 10px;
-    border: 1px solid black;
+    /*padding: 10px;*/
+    /*border: 1px solid black;*/
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -16,10 +17,13 @@ li {
 }
 
 h1 {
+    padding-top: 10px;
     text-align: center;
 }
 
 h2 {
+    padding-top: 20px;
+    padding-bottom: 0px;
     text-align: center;
 }
 
@@ -29,36 +33,44 @@ img {
     margin-right: auto;
 }
 
-.about-skills {
+.skills-lists {
     display: flex;
 }
 
-.about-skills>div {
+.skills-lists>div {
     flex: 10;
 }
 
-.wrapper {
+nav {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     display: flex;
     text-align: center;
-    background-color: white;
+    background-color: #80B192;
 }
 
-.wrapper>div {
+nav>.navitem {
     flex: 50;
 }
 
-.box {
+.navitem {
     text-decoration: none;
     text-align: center;
+    color: black;
 }
 
-.box:hover {
+.navitem:hover {
     text-decoration: underline;
+    color: grey;
 }
 
-.page {
-    display: none;
+footer {
+    background-color: #ECDCB0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
 }

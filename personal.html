@@ -17,96 +17,95 @@
 </head>
 
 <body>
-    <div class="wrapper" id="header">
-        <div class="box" name="about" onclick="presentPage('about','about')">About</div>
-        <div class="box" name="skills" onclick="presentPage('about','about-skills')">Skills</div>
-        <div class="box" name="timeline" onclick="presentPage('about','about-timeline')">Timeline</div>
-        <div class="box" name="projects" onclick="presentPage('about','about-projects')">Projects</div>
-        <div class="box" name="contact" onclick="presentPage('about','about-contact')">Contact</div>
-        <div class="box" name="blog" onclick="presentPage('blog')">Blog</div>
-    </div>
+    <nav>
+        <a id="test" class="navitem" href=personal.html>Home</a>
+        <a class="navitem" href=#about>About</a>
+        <a class="navitem" href=#skills>Skills</a>
+        <a class="navitem" href=#timeline>Timeline</a>
+        <a class="navitem" href=#projects>Projects</a>
+        <a class="navitem" href=#contact>Contact</a>
+        <a class="navitem" href="blog.html">Blog</a>
+    </nav>
+
     <h1>John Buonassisi</h1>
-    <img src="Headshot.png" alt="Headshot of John Buonassisi" title="John Buonassisi">
-    <div class="page" id="about">
+    <img src="headshot.png" alt="Headshot of John Buonassisi" title="John Buonassisi">
+
+    <section id="about">
         <h2>About</h2>
-        <p>I am a Senior Software Engineer, that works on bringing Satellite Ground Systems into the 21st century. In my spare time I enjoy anything outdoors related including skiing, biking, soccer, and kayaking. I also love to cook and go on food adventures
+        <p>I am a Senior Software Engineer who works on bringing Satellite Ground Systems into the 21st century. In my spare time I enjoy anything outdoors related including skiing, biking, soccer, and kayaking. I also love to cook and go on food adventures
             with my wife.
         </p>
-        <div class="about-skills" id="about-skills">
-            <div class="about-skills-list" name="experience">
-                <h2>Experience</h2>
-                <ul>
-                    <li>Satellite Data Reconstruction</li>
-                    <li>Ground System Scheduling</li>
-                    <li>Technical Leadership</li>
-                    <li>System Design</li>
-                    <li>System Integration</li>
-                    <li>Application Design</li>
-                    <li>Database Design</li>
-                </ul>
-            </div>
-            <div class="about-skills-list" name="languages">
-                <h2>Languages</h2>
-                <ul>
-                    <li>Go</li>
-                    <li>Java</li>
-                    <li>C++</li>
-                    <li>Swift</li>
-                    <li>Objective-C</li>
-                    <li>Bash</li>
-                    <li>Python</li>
-                </ul>
-            </div>
-            <div class="about-skills-list" name="technologies">
-                <h2>Technologies</h2>
-                <ul>
-                    <li>Kubernetes</li>
-                    <li>Docker</li>
-                    <li>MongoDB</li>
-                    <li>Postgres</li>
-                    <li>SQLite</li>
-                    <li>Kafka</li>
-                    <li>TCP/UDP Networking</li>
-                </ul>
-            </div>
-        </div>
-        <div class="about-timeline" id="about-timeline">
-            <h2>Timeline</h2>
+    </section>
+    <section id="skills" class="skills-lists">
+        <div class="skills-list" name="experience">
+            <h2>Experience</h2>
             <ul>
-                <li>2008-2013 SFU - Completed Bachelor of Applied Science with Honours</li>
-                <li>2010 Ballard Power Systems - Test Engineer of Hydrogen Fuel Cell membranes</li>
-                <li>2012 SFU Image Processing Lab - Research Assistant working on Biomedical Image Processing</li>
-                <li>2013-2016 MDA - Developer on existings Ground Systems and helped deploy them around the world</li>
-                <li>2016-2018 MDA - Developer on next generation Ground Systems using latest technologies</li>
-                <li>2018-2020 MDA - Technical Lead of projects related to next generation Ground Systems</li>
+                <li>Satellite Data Reconstruction</li>
+                <li>Ground System Scheduling</li>
+                <li>Technical Leadership</li>
+                <li>System Design</li>
+                <li>System Integration</li>
+                <li>Application Design</li>
+                <li>Database Design</li>
             </ul>
         </div>
-        <div class="about-projects" id="about-projects">
-            <h2>Projects</h2>
+        <div class="skills-list" name="languages">
+            <h2>Languages</h2>
             <ul>
-                <li>YourTake - A photo sharing game for iOS, <a href="https://github.com/johnbuonassisi">github.com/johnbuonassisi/yourtake</a></li>
-                <li>Web Scrapper - A simple Go application for scrapping soccer schedules from a website, <a href="https://github.com/johnbuonassisi/8rinks-scrapper">github.com/johnbuonassisi/8rinks-scrapper</a></li>
-                <li>Personal Website - This website, my first foray into a simple frontend app, <a href="https://github.com/johnbuonassisi/mysite">github.com/johnbuonassisi/mysite</a></li>
-                <li>Plastic Extruder - I built a small scale plastic extruder inspired by <a href="https://community.preciousplastic.com/academy/build/extrusion">precious plastic</a></li>
-                <li>Heart Rate Monitor - I designed a PCB for measuring the oxygen levels in blood via pulse oximetry</li>
+                <li>Go</li>
+                <li>Java</li>
+                <li>C++</li>
+                <li>Swift</li>
+                <li>Objective-C</li>
+                <li>Bash</li>
+                <li>Python</li>
             </ul>
         </div>
-        <div class="about-contact" id="about-contact">
-            <h2>Contact</h2>
+        <div class="skills-list" name="technologies">
+            <h2>Technologies</h2>
             <ul>
-                <li>johnbuonassisi@gmail.com</li>
-                <li><a href="https://github.com/johnbuonassisi">github.com/johnbuonassisi</a></li>
+                <li>Kubernetes</li>
+                <li>Docker</li>
+                <li>MongoDB</li>
+                <li>Postgres</li>
+                <li>SQLite</li>
+                <li>Kafka</li>
+                <li>TCP/UDP Networking</li>
             </ul>
         </div>
-    </div>
+    </section>
+    <section id="timeline">
+        <h2>Timeline</h2>
+        <ul>
+            <li>2008-2013 SFU - Completed Bachelor of Applied Science with Honours</li>
+            <li>2010 Ballard Power Systems - Test Engineer of Hydrogen Fuel Cell membranes</li>
+            <li>2012 SFU Image Processing Lab - Research Assistant working on Biomedical Image Processing</li>
+            <li>2013-2016 MDA - Developer on existings Ground Systems and helped deploy them around the world</li>
+            <li>2016-2018 MDA - Developer on next generation Ground Systems using latest technologies</li>
+            <li>2018-2020 MDA - Technical Lead of projects related to next generation Ground Systems</li>
+        </ul>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>YourTake - A photo sharing game for iOS, <a href="https://github.com/johnbuonassisi">github.com/johnbuonassisi/yourtake</a></li>
+            <li>Web Scraper - A simple Go application for scraping soccer schedules from a website, <a href="https://github.com/johnbuonassisi/8rinks-scrapper">github.com/johnbuonassisi/8rinks-scraper</a></li>
+            <li>Personal Website - This website, my first foray into a simple frontend app, <a href="https://github.com/johnbuonassisi/mysite">github.com/johnbuonassisi/mysite</a></li>
+            <li>Plastic Extruder - I built a small scale plastic extruder inspired by <a href="https://community.preciousplastic.com/academy/build/extrusion">precious plastic</a></li>
+            <li>Heart Rate Monitor - I designed a PCB for measuring the oxygen levels in blood via pulse oximetry</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <ul>
+            <li>johnbuonassisi@gmail.com</li>
+            <li><a href="https://github.com/johnbuonassisi">github.com/johnbuonassisi</a></li>
+        </ul>
+    </section>
 
-    <div class="page" id="blog">
-        <p>Coming soon</p>
-    </div>
-
-    <div class="footer">
+    <footer>
         <p>Created by John Buonassisi</p>
-    </div>
+    </footer>
 
     <script>
         // underline the first page title and present it to the user
