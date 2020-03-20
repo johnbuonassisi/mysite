@@ -5,6 +5,34 @@ html {
     background-color: white;
 }
 
+#about {
+    display: flex;
+}
+
+#about-container {
+    display: block;
+    padding-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+}
+
+#about-greeting {
+    padding-top: 80px;
+    text-align: left;
+    font-size: xxx-large;
+    margin-bottom: 0;
+}
+
+#about-blurb {
+    text-align: left;
+    padding-top: 5px;
+}
+
+#test {
+    background-color: green;
+}
+
 ul {
     background: white;
     /*padding: 10px;*/
@@ -23,14 +51,12 @@ h1 {
 
 h2 {
     padding-top: 20px;
-    padding-bottom: 0px;
     text-align: center;
 }
 
 img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    padding-top: 30px;
+    width: 100%;
 }
 
 .skills-lists {
