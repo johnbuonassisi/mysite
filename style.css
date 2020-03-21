@@ -5,6 +5,15 @@ html {
     background-color: white;
 }
 
+.timeline {
+    display: grid;
+    grid-template-columns: 10% 30% 60%;
+    margin-left: 3%;
+    margin-right: 3%;
+    row-gap: 1em;
+    column-gap: 1em;
+}
+
 #about {
     display: flex;
 }
