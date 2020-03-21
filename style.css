@@ -1,17 +1,28 @@
 html {
     background-color: white;
     font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: white;
 }
 
 .timeline {
     display: grid;
     grid-template-columns: 10% 30% 60%;
-    margin-left: 3%;
-    margin-right: 3%;
-    row-gap: 1em;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 20%;
+    padding-right: 20%;
+    row-gap: 3em;
     column-gap: 1em;
+    background-color: #4DA167;
+    color: #E8F1F2;
+    border: 0;
+    font-size: medium;
+}
+
+.year {
+    color: #31493C;
+    font-weight: bold;
 }
 
 #about {
@@ -44,9 +55,6 @@ html {
 
 ul {
     background: white;
-    /*padding: 10px;*/
-    /*border: 1px solid black;*/
-    font-family: 'Courier New', Courier, monospace;
 }
 
 li {
@@ -60,12 +68,15 @@ h1 {
 
 h2 {
     padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
+    margin: 0;
 }
 
 img {
     padding-top: 30px;
     width: 100%;
+    height: 100%;
 }
 
 .skills-lists {
@@ -83,7 +94,7 @@ nav {
     width: 100%;
     display: flex;
     text-align: center;
-    background-color: #80B192;
+    background-color: #515052;
 }
 
 nav>.navitem {
@@ -93,7 +104,7 @@ nav>.navitem {
 .navitem {
     text-decoration: none;
     text-align: center;
-    color: black;
+    color: #E8F1F2;
 }
 
 .navitem:hover {
@@ -108,4 +119,8 @@ footer {
     width: 100%;
     text-align: center;
     padding-left: 0;
+}
+
+body {
+    margin: 0
 }
