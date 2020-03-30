@@ -14,11 +14,13 @@
 
     <link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
 </head>
 
 <body>
     <nav>
-        <a class="navitem" href=personal.html>Home</a>
         <a class="navitem" href=#about>About</a>
         <a class="navitem" href=#skills>Skills</a>
         <a class="navitem" href=#timeline>Timeline</a>
@@ -27,12 +29,15 @@
         <a class="navitem" href="blog.html">Blog</a>
     </nav>
 
+    <section id="nav-spacer">Help</section>
+
     <section id="about">
-        <img src="headshot_circle_2.png" alt="Headshot of John Buonassisi" title="John Buonassisi">
+        <div id="about-container">
+            <img class="headshot" src="headshot_circle_2.png" alt="Headshot of John Buonassisi" title="John Buonassisi">
+        </div>
         <section id="about-container">
             <h1 id="about-greeting">Hi, I'm John Buonassisi</h1>
-            <p id="about-blurn">I am a Senior Software Engineer working on bringing Satellite Ground Systems into the 21st century. In my spare time I enjoy anything outdoors related including skiing, biking, soccer, and kayaking. I also love to cook and go on food adventures
-                with my wife.
+            <p id="about-blurb">I am a curious engineer interested in technologies that effect positive change in our world. I am currently employed as a Senior Software Engineer but I also work on side projects that I find interesting. I enjoy anything outdoors related including skiing, biking, soccer, and kayaking. I also love to cook and go on food adventures with my wife.
             </p>
         </section>
     </section>
@@ -77,59 +82,57 @@
     <section id="timeline">
         <h2>Timeline</h2>
         <div class="timeline">
-            <div class="year">2008</div>
-            <div>Simon Fraser University</div>
-            <div>Started Bachelor of Science</div>
-            <div class="year">2010</div>
-            <div>Ballard Power Systems</div>
-            <div>Completed Co-op testing hydrogen fuel cell membranes</div>
-            <div class="year">2012</div>
-            <div>SFU Image Processing Lab</div>
-            <div>Completed Co-op creating novel image processing algorithms for automatic detection of cells in biomedical images</div>
-            <div class="year">2013</div>
-            <div>Simon Fraser University</div>
-            <div>Graduated with Degree in Applied Science with honours</div>
-            <div class="year">2013</div>
-            <div>Macdonald Dettwiler and Associates</div>
-            <div>Started as a Jr. Software Engineer in the Satellite Ground Systems department</div>
-            <div class="year">2016</div>
-            <div>Macdonald Dettwiler and Associates</div>
-            <div>Started as Intermediate Software Engineer working on next generation Ground Systems</div>
-            <div class="year">2018</div>
-            <div>Macdonald Dettwiler and Associates</div>
-            <div>Became Technical Lead of projects related to next generation Ground Systems</div>
+            <div class="timeline-year">2008</div>
+            <div><a class="timeline-institution" href="http://www.sfu.ca/fas.html">Simon Fraser University</a></div>
+            <div class="timeline-description">Started Bachelor of Applied Science</div>
+            <div class="timeline-year">2010</div>
+            <div><a class="timeline-institution" href="https://www.ballard.com">Ballard Power Systems</a></div>
+            <div class="timeline-description">Completed Co-op testing hydrogen fuel cell membranes</div class="timeline-description">
+            <div class="timeline-year">2012</div>
+            <div><a class="timeline-institution" href="Image Processing Lab">SFU Image Processing Lab</a class="timeline-institution"></div class="timeline-institution">
+            <div class="timeline-description">Completed Co-op creating novel image processing algorithms for automatic detection of cells in biomedical images</div class="timeline-description">
+            <div class="timeline-year">2013</div>
+            <div><a class="timeline-institution" href="http://www.sfu.ca/fas.html">Simon Fraser University</a class="timeline-institution"></div class="timeline-institution">
+            <div class="timeline-description">Graduated with Degree in Applied Science with honours</div class="timeline-description">
+            <div class="timeline-year">2013</div>
+            <div><a class="timeline-institution" href="https://mdacorporation.com">MDA</a class="timeline-institution"></div class="timeline-institution">
+            <div class="timeline-description">Started as a Jr. Software Engineer in the Satellite Ground Systems department</div class="timeline-description">
+            <div class="timeline-year">2016</div>
+            <div><a class="timeline-institution" href="https://mdacorporation.com">MDA</a class="timeline-institution"></div class="timeline-institution">
+            <div class="timeline-description">Started as Intermediate Software Engineer working on next generation Ground Systems</div class="timeline-description">
+            <div class="timeline-year">2018</div>
+            <div><a class="timeline-institution" href="https://mdacorporation.com">MDA</a class="timeline-institution"></div class="timeline-institution">
+            <div class="timeline-description">Became Technical Lead of projects related to next generation Ground Systems</div class="timeline-description">
         </div>
     </section>
     <section id="projects">
         <h2>Projects</h2>
-        <div class="timeline">
-            <div><a href="https://github.com/johnbuonassisi/yourtake">YourTake</a>
-            </div>
-            <div>A photo sharing and drawing game for iOS.</div>
-            <div>In the process I taught myself Objective-C and Swift and learned about user authentication, push notifications, backend web servers, and UX design. The app was ready to release to the app store, however Apple requires objectionable content
-                filtering which I have yet to implement.</div>
-            <div><a href="https://github.com/johnbuonassisi/8rinks-scrapper">Web Scraper</a></div>
-            <div>A simple Go application for scraping soccer schedules from a website.</div>
-            <div>I play indoor soccer at a facility called 8-Rinks. Getting schedules from their website was a bit annoying so I wrote a small Go app that automates this process.</div>
-            <div><a href="https://github.com/johnbuonassisi/mysite">Personal Website</a></div>
-            <div>The website you are currently on.</div>
-            <div>I had created websites using Wordpress in the past, but I was always frustrated with the cost and clunkiness of it. For these reasons, I decided to write my website in basic HTML, CSS, and Javascript.
-            </div>
-            <div>Plastic Extruder</div>
-            <div>I built a small scale plastic extruder inspired by <a href="https://community.preciousplastic.com/academy/build/extrusion">precious plastic</a></div>
-            <div>The idea is you collect waste plastic, clean it, grind it up, then feed it through this extruder to create a string of plastic. This "string" can be used in a 3D printer to create new plastic objects.</div>
+        <div class="projects">
+            <div><a class="projects-title" href="https://github.com/johnbuonassisi/yourtake">YourTake</a></div>
+            <div class="projects-summary">A social photography and drawing game for iOS</div>
+            <div class="projects-description">In the process I taught myself Objective-C, Swift, user authentication, push notifications, backend web servers, and UX design. A few final features are required before release in the app store.</div>
+            <div><a class="projects-title" href="https://github.com/johnbuonassisi/8rinks-scrapper">Web Scraper</a></div>
+            <div class="projects-summary">A simple Go application for scraping soccer schedules from a website</div>
+            <div class="projects-description">I play indoor soccer at a facility called 8-Rinks. Getting schedules from their website was a bit annoying so I wrote a small Go app that automates this process.</div>
+            <div><a class="projects-title" href="https://github.com/johnbuonassisi/mysite">Personal Website</a></div>
+            <div class="projects-summary">This simple website and blog</div>
+            <div class="projects-description">I had created websites using Wordpress in the past, but I was always frustrated with the cost and clunkiness of it. For these reasons, I decided to write my website in basic HTML, CSS, and Javascript.
+            </div class="projects-description">
+            <div class="projects-title">Plastic Extruder</div>
+            <div class="projects-summary">A small scale plastic extruder I built inspired by <a href="https://community.preciousplastic.com/academy/build/extrusion">precious plastic</a></div>
+            <div class="projects-description">The idea is you collect waste plastic, clean it, grind it up, then feed it through this extruder to create a string of plastic. This "string" can be used in a 3D printer to create new plastic objects.</div>
         </div>
     </section>
     <section id="contact">
         <h2>Contact</h2>
-        <ul>
-            <li>johnbuonassisi@gmail.com</li>
-            <li><a href="https://github.com/johnbuonassisi">github.com/johnbuonassisi</a></li>
+        <ul class="contact-list">
+            <li><a class="contact-item" href="mailto:johnbuonassisi@gmail.com"><img class="contact-type" src="email_32px.png">johnbuonassisi@gmail.com</a></li>
+            <li><a class="contact-item" href="https://github.com/johnbuonassisi"><img class="contact-type" src="Github-Mark-32px.png">johnbuonassisi</a></li>
         </ul>
     </section>
 
     <footer>
-        <p>Created by John Buonassisi</p>
+        Created by John Buonassisi
     </footer>
 
     <script>
