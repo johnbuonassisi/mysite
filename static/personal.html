@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>John Buonassisi</title>
+
+    <meta name="author" content="John Buonassisi">
+    <meta name="description" content="This is my personal web page">
+
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:description" content="This is an example page to demonstrate usage of metadata on web pages.">
+    <meta property="og:title" content="Metadata; The HTML &lt;head&gt;, on MDN">
+
+    <link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+</head>
+
+<body>
+    <nav>
+        <a class="navitem" href=#about>About</a>
+        <a class="navitem" href=#skills>Skills</a>
+        <a class="navitem" href=#timeline>Timeline</a>
+        <a class="navitem" href=#projects>Projects</a>
+        <a class="navitem" href=#contact>Contact</a>
+        <a class="navitem">Blog</a>
+    </nav>
+
+    <section id="nav-spacer">Help</section>
+
+    <section id="about">
+        <div id="about-container">
+            <img class="headshot" src="asset/headshot.png" alt="Headshot of John Buonassisi" title="John Buonassisi">
+        </div>
+        <section id="about-container">
+            <h1 id="about-greeting">Hi, I'm John Buonassisi</h1>
+            <p id="about-blurb">I am a curious engineer interested in technologies that have an impact on the world. I do this by working as a Software Engineer and working on side projects whenever I can. I enjoy anything outdoors related including skiing, biking, soccer, and kayaking. I also love to cook and go on food adventures with my wife.
+            </p>
+        </section>
+    </section>
+    <section id="skills" class="skills-lists">
+        <div class="skills-list" name="experience">
+            <h2>Experience</h2>
+            <ul>
+                <li>Satellite Data Reconstruction</li>
+                <li>Ground System Scheduling</li>
+                <li>Technical Leadership</li>
+                <li>System Design</li>
+                <li>System Integration</li>
+                <li>Application Design</li>
+                <li>Database Design</li>
+            </ul>
+        </div>
+        <div class="skills-list" name="languages">
+            <h2>Languages</h2>
+            <ul>
+                <li>Go</li>
+                <li>Java</li>
+                <li>C++</li>
+                <li>Swift</li>
+                <li>Objective-C</li>
+                <li>Bash</li>
+                <li>Python</li>
+            </ul>
+        </div>
+        <div class="skills-list" name="technologies">
+            <h2>Technologies</h2>
+            <ul>
+                <li>Kubernetes</li>
+                <li>Docker</li>
+                <li>MongoDB</li>
+                <li>Postgres</li>
+                <li>SQLite</li>
+                <li>Kafka</li>
+                <li>TCP/UDP Networking</li>
+            </ul>
+        </div>
+    </section>
+    <section id="timeline">
+        <h2>Timeline</h2>
+        <div class="timeline">
+            <div class="timeline-year">2008</div>
+            <div><a class="timeline-institution" href="http://www.sfu.ca/fas.html">Simon Fraser University</a></div>
+            <div class="timeline-description">Started Bachelor of Applied Science</div>
+            <div class="timeline-year">2010</div>
+            <div><a class="timeline-institution" href="https://www.ballard.com">Ballard Power Systems</a></div>
+            <div class="timeline-description">Completed Co-op testing hydrogen fuel cell membranes</div class="timeline-description">
+            <div class="timeline-year">2012</div>
+            <div><a class="timeline-institution" href="Image Processing Lab">SFU Image Processing Lab</a class="timeline-institution"></div class="timeline-institution">
+            <div class="timeline-description">Completed Co-op creating novel image processing algorithms for automatic detection of cells in biomedical images</div class="timeline-description">
+            <div class="timeline-year">2013</div>
+            <div><a class="timeline-institution" href="http://www.sfu.ca/fas.html">Simon Fraser University</a class="timeline-institution"></div class="timeline-institution">
+            <div class="timeline-description">Graduated with Degree in Applied Science with honours</div class="timeline-description">
+            <div class="timeline-year">2013</div>
+            <div><a class="timeline-institution" href="https://mdacorporation.com">MDA</a class="timeline-institution"></div class="timeline-institution">
+            <div class="timeline-description">Started as a Jr. Software Engineer in the Satellite Ground Systems department</div class="timeline-description">
+            <div class="timeline-year">2016</div>
+            <div><a class="timeline-institution" href="https://mdacorporation.com">MDA</a class="timeline-institution"></div class="timeline-institution">
+            <div class="timeline-description">Started as Intermediate Software Engineer working on next generation Ground Systems</div class="timeline-description">
+            <div class="timeline-year">2018</div>
+            <div><a class="timeline-institution" href="https://mdacorporation.com">MDA</a class="timeline-institution"></div class="timeline-institution">
+            <div class="timeline-description">Became Technical Lead of projects related to next generation Ground Systems</div class="timeline-description">
+        </div>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div><a class="projects-title" href="https://github.com/johnbuonassisi/yourtake">YourTake</a></div>
+            <div class="projects-summary">A social photography and drawing game for iOS</div>
+            <div class="projects-description">In the process I taught myself Objective-C, Swift, user authentication, push notifications, backend web servers, and UX design. A few final features are required before release in the app store.</div>
+            <div><a class="projects-title" href="https://github.com/johnbuonassisi/8rinks-scrapper">Web Scraper</a></div>
+            <div class="projects-summary">A simple Go application for scraping soccer schedules from a website</div>
+            <div class="projects-description">I play indoor soccer at a facility called <a href="https://canlanaisl.icesports.com/BURNABY8RINKS/soccer-schedule.aspx">8-Rinks</a>. Getting schedules from their website was a bit annoying so I wrote a small Go app that automates this process.</div>
+            <div><a class="projects-title" href="https://github.com/johnbuonassisi/mysite">Personal Website</a></div>
+            <div class="projects-summary">This simple website and blog</div>
+            <div class="projects-description">I had created websites using Wordpress in the past, but I was always frustrated with the cost and clunkiness of it. For these reasons, I decided to write my website in basic HTML, CSS, and Javascript.
+            </div class="projects-description">
+            <div class="projects-title">Plastic Extruder</div>
+            <div class="projects-summary">A small scale plastic extruder I built inspired by <a href="https://community.preciousplastic.com/academy/build/extrusion">precious plastic</a></div>
+            <div class="projects-description">The idea is you collect waste plastic, clean it, grind it up, then feed it through this extruder to create a string of plastic. This "string" can be used in a 3D printer to create new plastic objects.</div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <ul class="contact-list">
+            <li><a class="contact-item" href="mailto:johnbuonassisi@gmail.com"><img class="contact-type" src="asset/email.png">johnbuonassisi@gmail.com</a></li>
+            <li><a class="contact-item" href="https://github.com/johnbuonassisi"><img class="contact-type" src="asset/github.png">johnbuonassisi</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        Created by John Buonassisi
+    </footer>
+
+    <script>
+    </script>
+
+</body>
+
+
+</html>
