@@ -1,6 +1,6 @@
-# MySite - John Buonassisi's Website
+# MySite
 
-## My simple, personal, mostly static website, served by a Go HTTP server. The
+My simple, personal, mostly static website, served by a Go HTTP server. The
 purpose of the project was to introduce myself to HTML, CSS, and Go's http
 package. The site consists of a main page that acts as an overview about myself
 and a bit of a resume. I intend to also implement a blog page that will render
