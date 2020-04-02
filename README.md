@@ -6,6 +6,24 @@ package. The site consists of a main page that acts as an overview about myself
 and a bit of a resume. I intend to also implement a blog page that will render
 blog posts I create in mardown format.
 
+## Project structure
+
+* index.html - static html for the home page
+* blog.html - template html for the blog page
+* ./static - contains static files to be served by a http file server
+* ./static/style.css - the style sheet applied to home and blog pages
+* ./static/asset - directory containing assets, like images, for use in html
+* ./static/blog - directory containing blog posts in Markdown format
+* main.go - Go http server for serving and rendering website
+
+## Adding Blog posts
+
+Blog posts can be added by adding a Markdown file to the static/blog directory. Files must be
+named using the following naming convention <Date>_<Title>.md. Where Date is a RFC339
+compliant date-time string and Title is the title of the blog post. The Date will be used to
+order the Blog posts in the listing on the Blog page and the Title will be used as the title
+of the post.
+
 ## To run locally:
 1. cd mysite
 2. go build
