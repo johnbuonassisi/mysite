@@ -2,6 +2,7 @@ html {
     font-size: 20px;
     font-family: "Hind";
     background-color: white;
+    height: 100%;
 }
 
 h1 {
@@ -29,6 +30,9 @@ li {
 body {
     margin: 0;
     font-family: "Open Sans";
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 } 
 
 nav {
@@ -45,9 +49,9 @@ nav {
 }
 
 #nav-spacer {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 14px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
 }
 
 nav>.navitem {
@@ -178,17 +182,6 @@ nav>.navitem {
     flex: 10;
 }
 
-footer {
-    background-color: #92898A;
-    color: white;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
-}
-
 .emphasis {
     color: #3B60E4;
 }
@@ -227,4 +220,94 @@ a:hover {
 .contact-item:hover {
     color: #92898A;
     text-decoration: none;
+}
+
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    margin-right: 160px;
+    padding: 0px 10px;
+}
+
+.post-heading {
+    display: inline;
+}
+
+.post-title {
+    font-size: 25px;
+}
+
+.post-date {
+    font-style: italic;
+    font-size: 16px;
+    color: #92898A;
+}
+
+.post-description {
+    font-size: 16px;
+}
+
+article {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.index {
+    padding-bottom: 40px;
+}
+
+.index-heading {
+    display: inline;
+}
+
+.index-title {
+    font-size: 20px;
+}
+
+.index-date {
+    font-style: italic;
+    font-size: 16px;
+    color: #92898A;
+}
+
+.index-description {
+    font-size: 16px;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    background-color: #92898A;
+    color: white;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    vertical-align: middle;
+    flex-shrink: 0;
 }

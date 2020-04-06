@@ -21,6 +21,7 @@
 </head>
 
 <body>
+
     <div class="content">
     <nav>
         <a class="navitem" href=/#about>About</a>
@@ -31,38 +32,25 @@
         <a class="navitem" href="/blog">Blog</a>
     </nav>
 
-    <!--
-    <div class="sidenav">
-        {{range .Posts}}
-        <a href="#{{.Reference}}">{{.Title}}</a>
-        {{end}}
+        <section id="nav-spacer"></section>
+
+        <h1>John's Blog Index</h1>
+        <main class="main">
+            {{range .Posts}}
+            <div class="index" id="{{.Reference}}">
+                    <div class="index-heading">
+                        <a class="index-title" href="/blog/#{{.Reference}}">{{.Title}}</a>
+                        <div class="index-date">{{.FormattedDate}}</div>
+                    </div>
+                    <div class="index-description">{{.Description}}</div>
+            </div>
+            {{end}}
+        </main>
     </div>
--->
 
-    <section id="nav-spacer"></section>
-
-    <h1>John's Blog</h1>
-
-    <main class="main">
-        {{range .Posts}}
-        <div class="post-heading" id="{{.Reference}}">
-            <a class="post-title" href="/blog#{{.Reference}}">{{.Title}}</a>
-            <div class="post-date">{{.FormattedDate}}</div>
-        </div>
-        <div class="post-description">{{.Description}}</div>
-        <article class="markdown-body">
-            {{.Content}}
-        </article>
-        {{end}}
-
-        <a href="/blog/index">Find more blog posts</div>
-    </main>
-    
     <footer class="footer">
         Created by John Buonassisi
     </footer>
-</div>
+
 </body>
-
-
 </html>
