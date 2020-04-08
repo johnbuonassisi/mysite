@@ -16,7 +16,7 @@ I took some time to go through MDN's documentation on [HTML](https://developer.m
 
 ### Start prototyping
 
-Armed with more knowledge about web technologies I decided to start playing around with HTML and CSS. I wanted my site to be a simple resume style, single page site. It should detail who I am, what I do, and the past experiences I decided to split the page into the following sections; introduction, skills, timeline, projects, and contact. At the top of the page there is a fixed navigation bar for jumping to the different sections, this navigation bar does not move when the page is scrolled. The bottom of the page has a "sticky" footer that always sticks to the end of the page. The result is the website you are currently on.
+Armed with more knowledge about web technologies I decided to start playing around with HTML and CSS. I wanted my site to be a simple resume style, single page site. It should detail who I am, what I do, and the past experiences I have. I decided to split the page into the following sections; introduction, skills, timeline, projects, and contact. At the top of the page there is a fixed navigation bar for jumping to the different sections, this navigation bar does not move when the page is scrolled. The bottom of the page has a "sticky" footer that always sticks to the end of the page. The result is the website you are currently on.
 
 It took me a few iterations to figure out how to build each section so I want to detail each section in my nexts posts. I will describe how I built features in HTML and CSS, then I will get into how I chose to serve the site, and finally how I deployed the site using a cloud provider. I eventually added the blog page which I will also write about in future posts.
 
