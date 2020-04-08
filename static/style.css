@@ -36,16 +36,37 @@ body {
 } 
 
 nav {
+    /* Use Flexbox for display so children are displayed in a row */
+    display: flex;
+    /* Set nav to be fixed on the top and span the entire width of the page */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    display: flex;
-    text-align: center;
-    background-color: #2274A5;
+    /* Add padding to top and bottom so contained items are vertically centered */
     padding-top: 10px;
     padding-bottom: 10px;
-    font-family: "Open Sans";
+    /* Set background to secondary colour */
+    background-color: #2274A5;
+    z-index: 1;
+    height: 20px;
+}
+
+.navitem {
+    /* This is the same as flex: 1 1 auto, which makes the flex items take up all
+     the space of their flex container. It sets flex-grow, flex-shrink, and flex-basis. 
+     See https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+     for details*/
+    flex: auto;
+    /* Put text in the middle of the flex item */
+    text-align: center;
+    font-size: 14px;
+    color: white;
+}
+
+.navitem:hover {
+    /* On hover set to emphasis colour */
+    color: #92898A;
 }
 
 #nav-spacer {
@@ -54,26 +75,16 @@ nav {
     font-size: 20px;
 }
 
-nav>.navitem {
-    flex: 50;
-}
-
-.navitem {
-    text-decoration: none;
-    text-align: center;
-    font-size: 14px;
-    color: white;
-}
-
-.navitem:hover {
-    color: #92898A;
-}
-
-#about {
+#about-section {
     display: flex;
-    padding-top: 40px;
-    margin-top: -20px;
+    padding-top: 80px;
     padding-bottom: 80px;
+}
+
+.main {
+        margin-left: 15%; /* Same as the width of the sidebar */
+        margin-right: 15%;
+        padding: 0px 10px;
 }
 
 #about-container {
@@ -96,10 +107,10 @@ nav>.navitem {
     padding-top: 20px;
 }
 
-#timeline {
+#timeline-section {
+    position: relative;
     padding-top: 20px;
-    margin-top: -20px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
 }
 
 .timeline {
@@ -130,10 +141,10 @@ nav>.navitem {
     text-decoration: none;
 }
 
-#projects {
+#projects-section {
     padding-top: 20px;
-    margin-top: -20px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
+    position: relative;
 }
 
 .projects {
@@ -161,17 +172,15 @@ nav>.navitem {
     text-decoration: none;
 }
 
-
-
 .headshot {
     padding-top: 30px;
     text-align: center;
 }
 
-#skills {
+#skills-section {
     padding-top: 20px;
-    margin-top: -20px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
+    position: relative;
 }
 
 .skills-lists {
@@ -179,14 +188,15 @@ nav>.navitem {
 }
 
 .skills-lists>div {
-    flex: 10;
+    flex: auto;
 }
 
 .emphasis {
     color: #3B60E4;
 }
 
-#contact {
+#contact-section {
+    position: relative;
     padding-bottom: 20px;
 }
 
@@ -244,12 +254,6 @@ a:hover {
 
 .sidenav a:hover {
     color: #f1f1f1;
-}
-
-.main {
-    margin-left: 160px; /* Same as the width of the sidebar */
-    margin-right: 160px;
-    padding: 0px 10px;
 }
 
 .post-heading {
@@ -310,4 +314,9 @@ article {
     text-align: center;
     vertical-align: middle;
     flex-shrink: 0;
+}
+
+.target {
+    position: absolute;
+    top: -40px;
 }
