@@ -4,10 +4,19 @@
             "file": "static/blog/hello.md",
             "reference": "hello",
             "type": "markdown",
-            "title": "Hello World! Building a website from scratch - Part 1",
+            "title": "Hello World! Building a website from scratch",
             "author": "John Buonassisi",
             "date": "2020-04-05T12:12:12.0Z",    
             "description": "I describe how I started building a website from scratch"    
+        },
+        {
+            "file": "static/blog/nav.md",
+            "reference": "nav",
+            "type": "markdown",
+            "title": "A Fixed Navigation Bar using HTML and CSS",
+            "author": "John Buonassisi",
+            "date": "2020-04-10T12:12:12.0Z",
+            "description": "I describe how to make a fixed navigation bar using HTML and CSS"
         }
     ]
 }

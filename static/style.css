@@ -271,7 +271,9 @@ a:hover {
 }
 
 .post-description {
+    font-style: italic;
     font-size: 16px;
+    color: #92898A;
 }
 
 article {
