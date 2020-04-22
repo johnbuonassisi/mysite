@@ -1,34 +1,32 @@
 # MySite
 
-My simple, personal, mostly static website, served by a Go HTTP server. The
+My simple, from scratch, personal website served by a Go HTTP server. The
 purpose of the project was to introduce myself to HTML, CSS, and Go's http
 package. The site consists of a main page that acts as an overview about myself
-and a bit of a resume. I intend to also implement a blog page that will render
-blog posts I create in mardown format.
+and a bit of a resume. There is also a blog page and blog index.
 
 ## Project structure
 
-* index.html - static html for the home page
-* blog.html - template html for the blog page
+* ./cmd - Go http server code for serving and rendering website
+* ./template - HTML templates for the different pages of the site
+* ./markdown - contains markdown files that can be rendered to HTML
 * ./static - contains static files to be served by a http file server
-* ./static/style.css - the style sheet applied to home and blog pages
-* ./static/asset - directory containing assets, like images, for use in html
-* ./static/blog - directory containing blog posts in Markdown format
-* main.go - Go http server for serving and rendering website
+* ./static/style - contains available style sheets
+* ./static/asset - contains available assets like images
 
 ## Adding Blog posts
 
-Blog posts can be added by adding a Markdown file to the static/blog directory. Files must be
-named using the following naming convention <Date>_<Title>.md. Where Date is a RFC339
-compliant date-time string and Title is the title of the blog post. The Date will be used to
-order the Blog posts in the listing on the Blog page and the Title will be used as the title
-of the post.
+Blog posts can be added by adding a Markdown file to the /markdown directory and then
+adding the appropriate configuration in blog-config.json.
 
 ## To run locally:
-1. cd mysite
+1. cd mysite/cmd
 2. go build
-3. ./mysite
+3. ./cmd
 4. Got to web browser and enter localhost as the url
+
+## To access AWS EC2 Instance:
+* ssh -i ~/.ssh/<.pem file> ec2-user@<static ip>
 
 ## To run in AWS EC2 Instance:
 1. SSH into AWS EC2 Instance
