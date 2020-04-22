@@ -31,10 +31,10 @@ adding the appropriate configuration in blog-config.json.
 ## To run in AWS EC2 Instance:
 1. SSH into AWS EC2 Instance
 1. Git clone mysite project from github, https://github.com/johnbuonassisi/mysite.git
-2. cd mysite
+2. cd mysite/cmd
 3. Build the http server, go build -v
 4. Run a screen session, screen
-5. Run the Go binary ./mysite
+5. Run the Go binary ./cmd
 6. Exit screen session to keep mysite running in the background. ctrl+a, ctrl+d
 7. Exit SSH session with EC2 Instance
 
