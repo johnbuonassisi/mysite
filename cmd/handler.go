@@ -11,7 +11,7 @@ import (
 	"text/template"
 	"time"
 
-	blackfriday "gopkg.in/russross/blackfriday.v2"
+	blackfriday "github.com/russross/blackfriday/v2"
 )
 
 type HomeHandler struct {

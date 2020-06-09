@@ -17,6 +17,15 @@
             "author": "John Buonassisi",
             "date": "2020-04-16T12:12:12.0Z",
             "description": "I describe how to make a fixed navigation bar using HTML and CSS"
+        },
+	{
+            "file": "../markdown/bank.md",
+            "reference": "bank",
+            "type": "markdown",
+            "title": "Import old Bank Statements into Mint",
+            "author": "John Buonassisi",
+            "date": "2020-06-09T12:12:12.0Z",
+            "description": "Automate the upload of bank transactions from a PDF into Mint"
         }
     ]
 }
