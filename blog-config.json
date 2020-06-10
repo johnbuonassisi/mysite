@@ -22,10 +22,10 @@
             "file": "../markdown/bank.md",
             "reference": "bank",
             "type": "markdown",
-            "title": "Import old Bank Statements into Mint",
+            "title": "Import Transactions Into mint.com From a PDF Bank Statement",
             "author": "John Buonassisi",
             "date": "2020-06-09T12:12:12.0Z",
-            "description": "Automate the upload of bank transactions from a PDF into Mint"
+            "description": "Automate the upload of bank transactions from a PDF into mint.com"
         }
     ]
 }
