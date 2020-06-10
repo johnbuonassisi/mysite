@@ -121,8 +121,8 @@ where key-values are separated by the & character. I put each key-value on its o
            mtCashSplitPref=1&
            --compressedd
 
-	For every transaction from my bank statement, I would need to send a similar request, but modify the merchant, date, amount, and
-	mtIsExpense fields in the form data. It is important to note that mtType=pending-other, indicating that this transaction is a pending
+	For every transaction from my bank statement, I would need to send a similar request, but modify the `merchant`, `date`, `amount`, and
+	`mtIsExpense` fields in the form data. It is important to note that `mtType=pending-other`, indicating that this transaction is a pending
 	transaction from one of your bank accounts, and mtType should be set to the particular account number that the transaction corresponds to.
 
 2. I created a new integration in DocParser and selected an Advanced Webhook. 
@@ -133,8 +133,8 @@ request to [Mint](www.mint.com) for every row in the parsed table. I also added 
 	![alt text](../static/asset/advanced_options.png)
 
 4. I set merchant, date, and amount fields in the form data to data that was parsed
-from my bank statements. Data from the merged table produced by my parsing rules could be accessed by using the following syntax, {{merged.<field name>}} and
-the year I parsed from the statement could be accessed through {{year_of_statement}}. The initial body payload in the webhook describes all the data values
+from my bank statements. Data from the merged table produced by my parsing rules could be accessed by using the following syntax, `{{merged.<field name>}}` and
+the year I parsed from the statement could be accessed through `{{year_of_statement}}`. The initial body payload in the webhook describes all the data values
 that are accessible when setting up the webhook. Here is the final webhook setup. I will describe how it works below.
 
 	![alt text](../static/asset/form.png)
