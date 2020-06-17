@@ -31,10 +31,10 @@
             "file": "../markdown/list.md",
             "reference": "list",
             "type": "markdown",
-            "title": "Lessons Learned from container/list",
+            "title": "Lessons Learned from Go's container/list package",
             "author": "John Buonassisi",
             "date": "2020-06-16T12:12:12.0Z",
-            "description": "A code walkthrough of Go's container/list package"
+            "description": "I walkthrough Go's container/list package and things that can be learned from it"
         }
     ]
 }
