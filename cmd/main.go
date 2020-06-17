@@ -6,9 +6,9 @@ import (
 	"os"
 )
 
-const templatePath string = "../template"
-const staticPath string = "../static"
-const blogConfig string = "../blog-config.json"
+const templatePath string = "template"
+const staticPath string = "static"
+const blogConfig string = "blog-config.json"
 
 func main() {
 
