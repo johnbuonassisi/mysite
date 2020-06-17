@@ -2,10 +2,10 @@ For educational purposes, I recently took a stab at implementing a doubly linked
 I quickly stumbled upon the container/list package provided by the Go standard library that implements
 a generic doubly-linked list. The standard library implementation was much better than my own and I learned a few things from
 it. Here I will do a deep dive into the container/list package focusing on its design, nifty tricks it
-has employed, and how it was tested. Specificy I will describe the exported data types, how 
+has employed, and how it was tested. Specifically I will describe the exported data types, how 
 initialization works, how to insert and iterate, and how the package was tested.
 
-First a breif description of linked-lists. A linked-list is a data structure that provides a collection of data elements, whose order is
+First a brief description of linked-lists. A linked-list is a data structure that provides a collection of data elements, whose order is
 not determined by placement in memory (like arrays). Instead, each element of a linked-list points to the next. 
 Each element simply contains data and a pointer to the next element. In the case of a 
 doubly linked-list, each element also contains a pointer to the previous element. This allows the
@@ -186,7 +186,7 @@ for e := l.Front(); _; _ {
 }
 ```
 
-Under the hood, `l.Front()` returns `l.root.next`, the first element of the list. Similarily,
+Under the hood, `l.Front()` returns `l.root.next`, the first element of the list. Similarly,
 `l.Back()` returns `l.root.prev`, the last element of the list.
 
 Second, we need to define the stop condition. We want to stop iterating after we have reached the 
@@ -327,8 +327,8 @@ func TestList(t *testing.T) {
 ### Summary
 
 I hope this was a useful walk through of the container/list package. I showed the data structures
-used by the list, how the list is initialized, how insertation works, how to iterate
-and how the package is tested. I am pretty impressed with the elgance and simplicity of the
+used by the list, how the list is initialized, how insertions works, how to iterate
+and how the package is tested. I am pretty impressed with the elegance and simplicity of the
 implementation and look forward to diving into more standard library implementations in the future.
 If you found this post useful or found any errors please email me at <johnbuonassisi@gmail.com>. Until
 next time, `os.Exit(1)`.
