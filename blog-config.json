@@ -1,7 +1,7 @@
 {
     "posts": [
         {
-            "file": "../markdown/hello.md",
+            "file": "markdown/hello.md",
             "reference": "hello",
             "type": "markdown",
             "title": "Hello World! Building a website from scratch",
@@ -10,7 +10,7 @@
             "description": "I describe how I started building a website from scratch"    
         },
         {
-            "file": "../markdown/nav.md",
+            "file": "markdown/nav.md",
             "reference": "nav",
             "type": "markdown",
             "title": "A Fixed Navigation Bar using HTML and CSS",
@@ -19,7 +19,7 @@
             "description": "I describe how to make a fixed navigation bar using HTML and CSS"
         },
 	{
-            "file": "../markdown/bank.md",
+            "file": "markdown/bank.md",
             "reference": "bank",
             "type": "markdown",
             "title": "Import Transactions Into mint.com From a PDF Bank Statement",
@@ -28,7 +28,7 @@
             "description": "Automate the upload of bank transactions from a PDF into mint.com"
         },
 	{
-            "file": "../markdown/list.md",
+            "file": "markdown/list.md",
             "reference": "list",
             "type": "markdown",
             "title": "Lessons Learned from Go's container/list package",
