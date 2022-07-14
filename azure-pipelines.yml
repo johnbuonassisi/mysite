@@ -1,39 +1,45 @@
-# Go
-# Build your Go project.
-# Add steps that test, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/go
-
 trigger:
 - master
 
-pool:
-  vmImage: 'ubuntu-latest'
+stages:
+- stage: 'BuildTest'
+  displayName: 'Build and Test'
+  variables:
+    GOVERSION: '1.13.5'   # Version of Go tools used for building and testing
+    CGO_ENABLED: '0'      # Disable cgo to get a static binary
+    GOOS: 'linux'
+    GOARCH: 'amd64'
+  jobs:
+  - job: BuildTestBackend
+    displayName: 'Build and Test Go Backend'
+    pool:
+      vmImage: 'Ubuntu 18.04'
+    steps:
+    - task: GoTool@0
+      inputs:
+        version: $(GOVERSION)
+      displayName: 'Install and select Go version $(GOVERSION)'
 
-variables:
-  GOBIN:  '$(GOPATH)/bin' # Go binaries path
-  GOROOT: '/usr/local/go1.11' # Go installation path
-  GOPATH: '$(system.defaultWorkingDirectory)/gopath' # Go workspace path
-  modulePath: '$(GOPATH)/src/github.com/$(build.repository.name)' # Path to the module's code
-
-steps:
-- script: |
-    mkdir -p '$(GOBIN)'
-    mkdir -p '$(GOPATH)/pkg'
-    mkdir -p '$(modulePath)'
-    shopt -s extglob
-    shopt -s dotglob
-    mv !(gopath) '$(modulePath)'
-    echo '##vso[task.prependpath]$(GOBIN)'
-    echo '##vso[task.prependpath]$(GOROOT)/bin'
-  displayName: 'Set up the Go workspace'
-
-- script: |
-    go version
-    go get -v -t -d ./...
-    if [ -f Gopkg.toml ]; then
-        curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
-        dep ensure
-    fi
-    go build -v .
-  workingDirectory: '$(modulePath)'
-  displayName: 'Get dependencies, then build'
+    - script: |
+        # Get tools for converting Go's test reports
+        go get -u github.com/jstemmer/go-junit-report 2>&1
+        go get -u github.com/axw/gocov/gocov 2>&1
+        go get -u github.com/AlekSi/gocov-xml 2>&1
+        # Run Go tests and turn output into JUnit test result format
+        go test ./... -v -coverprofile=demo-coverage.txt -covermode count 2>&1 | $HOME/go/bin/go-junit-report > demo-report.xml
+        rc=${PIPESTATUS[0]} # Get result code of `go test`
+        # Convert coverage file into XML
+        $HOME/go/bin/gocov convert demo-coverage.txt > demo-coverage.json
+        $HOME/go/bin/gocov-xml < demo-coverage.json > demo-coverage.xml
+        # Check if `go test` had an error
+        if [ $rc -ne 0 ]; then
+          # Let script fail by writing to stderr
+          >&2 echo "Tests failed"
+        fi
+      displayName: 'Run unit tests and convert results'
+      failOnStderr: true
+    - task: Go@0
+      inputs:
+        command: 'build'
+        arguments: '-a -o demo'
+      displayName: 'Build Go app'
