@@ -3,9 +3,9 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 	"path/filepath"
 	"sort"
 	"text/template"
@@ -20,7 +20,7 @@ type HomeHandler struct {
 }
 
 func (hh *HomeHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	p, err := ioutil.ReadFile(filepath.Join(hh.TemplatePath, hh.TemplateName))
+	p, err := os.ReadFile(filepath.Join(hh.TemplatePath, hh.TemplateName))
 	if err != nil {
 		log.Printf("%v", err)
 		w.WriteHeader(500)
@@ -50,7 +50,7 @@ func (bh *BlogHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 	for i, b := range blog.Posts {
 
-		md, err := ioutil.ReadFile("./" + b.File)
+		md, err := os.ReadFile("./" + b.File)
 		if err != nil {
 			fmt.Printf("%v", err)
 			w.WriteHeader(500)
@@ -63,7 +63,7 @@ func (bh *BlogHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		blog.Posts[i].Content = string(html)
 	}
 
-	tf, err := ioutil.ReadFile(filepath.Join(bh.TemplatePath, bh.TemplateName))
+	tf, err := os.ReadFile(filepath.Join(bh.TemplatePath, bh.TemplateName))
 	if err != nil {
 		fmt.Printf("%v", err)
 		w.WriteHeader(500)
@@ -99,7 +99,7 @@ func (bih *BlogIndexHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	tf, err := ioutil.ReadFile(filepath.Join(bih.TemplatePath, bih.TemplateName))
+	tf, err := os.ReadFile(filepath.Join(bih.TemplatePath, bih.TemplateName))
 	if err != nil {
 		fmt.Printf("%v", err)
 		w.WriteHeader(500)
@@ -141,7 +141,7 @@ func (p *Post) FormattedDate() string {
 }
 
 func NewTimeSortedBlog(filepath string) (Blog, error) {
-	bcj, err := ioutil.ReadFile(filepath)
+	bcj, err := os.ReadFile(filepath)
 	if err != nil {
 		return Blog{}, err
 	}

@@ -2,13 +2,12 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"os"
 	"testing"
 	"text/template"
 	"time"
 
-	blackfriday "gopkg.in/russross/blackfriday.v2"
+	"github.com/russross/blackfriday/v2"
 )
 
 func TestBlackFriday(t *testing.T) {
@@ -17,7 +16,7 @@ func TestBlackFriday(t *testing.T) {
 	html := blackfriday.Run([]byte(md))
 	fmt.Printf("%v", string(html))
 
-	tf, err := ioutil.ReadFile("../template/blog.html")
+	tf, err := os.ReadFile("../template/blog.html")
 	if err != nil {
 		t.Fatalf("%v", err)
 	}
